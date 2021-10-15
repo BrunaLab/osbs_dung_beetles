@@ -9,7 +9,7 @@ library(readxl)
 
 # data are in an xlsx file with multiple tabs so need to read each one in,
 # standardize a few column names or data types, then bind the sheets together
-xl_data <- "./data_raw/DungBeetles.Data/Beetle_Database.xlsx"
+xl_data <- "./data_raw/Beetle_Database.xlsx"
 btl_data<-read_excel(xl_data, sheet = 1, skip=1)
 sample_dates<-read_excel(xl_data, sheet = 2)
 spp_names<-read_excel(xl_data, sheet = 3)
