@@ -1,0 +1,63 @@
+---
+title: "OSBS Dung Beetles Summary Info"
+author: "Emilio M. Bruna"
+date: "10/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(kableExtra)
+library(knitr)
+```
+```{r load_data, cached=TRUE, echo=FALSE, warning=FALSE,message = FALSE}
+btl_data_long<-read_csv("./data_clean/dung_btl_data_clean.csv")
+name_codes<-read_csv("./data_clean/name_codes.csv")
+btl_data_long<-left_join(btl_data_long,name_codes)
+
+```
+
+```{r}
+# this is to make sure numbers are printed in full, not in scientific notation
+inline_hook <- function(x) {
+  if (is.numeric(x)) {
+    format(x, digits = 2)
+  } else x
+}
+knitr::knit_hooks$set(inline = inline_hook)
+
+```
+
+### Total number of beetles sampled, all dates and spp combined
+```{r total_n, echo=FALSE}
+total_N<-btl_data_long %>% summarise(n=sum(count))
+```
+`r total_N`
+
+
+
+
+### total number of beetles sampled each round
+```{r total_n_sample, echo=FALSE}
+total_N_sample<-btl_data_long %>%
+  group_by(date) %>% 
+  summarise(n=sum(count)) %>% 
+  arrange(date)
+```
+`r kable(total_N_sample) %>% kable_styling()` 
+
+### total number of beetles sampled by habitat
+```{r total_n_hab, echo=FALSE}
+total_N_habitat<-btl_data_long %>%group_by(habitat) %>% summarise(n=sum(count))
+```
+
+`r kable(total_N_habitat) %>% kable_styling()`
+
+### total number of beetles sampled by species
+```{r total_n_spp, echo=FALSE}
+spp_totals<-btl_data_long %>% 
+  group_by(species) %>% 
+  summarise(n=sum(count)) %>% 
+  arrange(desc(n))
+```
+`r kable(spp_totals) %>% kable_styling()`

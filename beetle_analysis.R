@@ -192,12 +192,12 @@ name_codes<-name_codes %>%
   mutate(name2=if_else(name2=="","AAA",name2)) %>% 
   mutate(name3=if_else(name3=="","AAA",name3)) %>% 
   mutate(name1=if_else(name1=="histeridae","hi_sp",name1)) %>% 
-  mutate(new_name=paste(name1,name2,name3, sep="_")) %>% 
-  mutate(new_name=gsub("_AAA", '', new_name)) %>% 
-  mutate(name=paste(V1,V2,V3, sep=" ")) %>% 
-  select(name,new_name)
-name_codes$name<-trimws(name_codes$name)
-names(btl_data)<-name_codes$new_name
+  mutate(code=paste(name1,name2,name3, sep="_")) %>% 
+  mutate(code=gsub("_AAA", '', code)) %>% 
+  mutate(species=paste(V1,V2,V3, sep=" ")) %>% 
+  select(species,code)
+name_codes$species<-trimws(name_codes$species)
+names(btl_data)<-name_codes$code
 
 # standardize the counts of each species by replacing NA with zero
 btl_data<-btl_data %>% mutate(across(ph_ig_fl:unknown_spp, ~replace_na(.x, 0)))
@@ -208,7 +208,7 @@ btl_data <-btl_data %>% relocate(notes, .before = "ph_ig_fl")
 # covert the data to long format
 btl_data_long<-btl_data %>% 
   pivot_longer(cols = ph_ig_fl:unknown_spp,
-               names_to = "species",values_to = "count")
+               names_to = "code",values_to = "count")
 
 
 
@@ -221,22 +221,3 @@ write_csv(name_codes,"./data_clean/name_codes.csv")
 # save the data in long form
 write_csv(btl_data_long,"./data_clean/dung_btl_data_clean.csv")
 
-
-
-# total number of beetles sampled, all dates and spp combined
-total_N<-btl_data_long %>% summarise(n=sum(count))
-total_N
-
-# total number of beetles sampled each round
-total_N_sample<-btl_data_long %>%group_by(sample) %>% summarise(n=sum(count))
-total_N_sample
-# total number of beetles sampled by habitat
-total_N_habitat<-btl_data_long %>%group_by(habitat) %>% summarise(n=sum(count))
-total_N_habitat
-
-# total number of beetles sampled by species
-spp_totals<-btl_data_long %>% 
-  group_by(species) %>% 
-  summarise(n=sum(count)) %>% 
-  arrange(desc(n))
-spp_totals

@@ -1,4 +1,4 @@
-sample,date,key,trap_id,site,habitat,notes,species,count
+sample,date,key,trap_id,site,habitat,notes,code,count
 sample_1,2010-10-16,1,1,site_1,longleaf,0,ph_ig_fl,1
 sample_1,2010-10-16,1,1,site_1,longleaf,0,bo_de,1
 sample_1,2010-10-16,1,1,site_1,longleaf,0,on_tu,2
