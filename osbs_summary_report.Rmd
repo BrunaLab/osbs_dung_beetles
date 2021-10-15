@@ -12,8 +12,8 @@ library(knitr)
 ```
 ```{r load_data, cached=TRUE, echo=FALSE, warning=FALSE,message = FALSE}
 btl_data_long<-read_csv("./data_clean/dung_btl_data_clean.csv")
-name_codes<-read_csv("./data_clean/name_codes.csv")
-btl_data_long<-left_join(btl_data_long,name_codes)
+# name_codes<-read_csv("./data_clean/name_codes.csv")
+# btl_data_long<-left_join(btl_data_long,name_codes)
 
 ```
 
@@ -30,7 +30,7 @@ knitr::knit_hooks$set(inline = inline_hook)
 
 ```{r total_n, echo=FALSE}
 ### Total number of beetles sampled, all dates and spp combined
-total_N<-btl_data_long %>% summarise(n=sum(count))
+total_N<-btl_data_long %>% summarise(n=sum(count, na.rm=TRUE))
 ```
 ### Total number of beetles sampled, all dates and spp combined: `r total_N`
 
@@ -41,16 +41,16 @@ total_N<-btl_data_long %>% summarise(n=sum(count))
 ```{r total_n_sample, echo=FALSE}
 # total number of beetles sampled each round
 total_N_sample<-btl_data_long %>%
-  group_by(date) %>% 
-  summarise(n=sum(count)) %>% 
-  arrange(date)
+  group_by(sample_round) %>% 
+  summarise(n=sum(count, na.rm=TRUE)) %>% 
+  arrange(sample_round)
 ```
 `r kable(total_N_sample, caption = "total number of beetles sampled each round") %>% kable_styling()` 
 
 
 ```{r total_n_hab, echo=FALSE}
 ### total number of beetles sampled by habitat
-total_N_habitat<-btl_data_long %>%group_by(habitat) %>% summarise(n=sum(count))
+total_N_habitat<-btl_data_long %>% group_by(habitat) %>% summarise(n=sum(count, na.rm=TRUE))
 ```
 `r kable(total_N_habitat, caption ="total number of beetles sampled by habitat") %>% kable_styling()`
 
@@ -58,8 +58,8 @@ total_N_habitat<-btl_data_long %>%group_by(habitat) %>% summarise(n=sum(count))
 ```{r total_n_spp, echo=FALSE}
 ### total number of beetles sampled by species
 spp_totals<-btl_data_long %>% 
-  group_by(species) %>% 
-  summarise(n=sum(count)) %>% 
+  group_by(sp_code,genus,species) %>% 
+  summarise(n=sum(count, na.rm=TRUE)) %>% 
   arrange(desc(n))
 ```
 `r kable(spp_totals, caption = "total number of beetles sampled by species") %>% kable_styling()`
