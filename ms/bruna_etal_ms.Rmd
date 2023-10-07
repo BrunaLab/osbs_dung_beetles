@@ -1,0 +1,434 @@
+---
+title: Habitat-dependent patterns of phenology in dung beetle communities 
+preprint: false
+author: 
+  - name: Emilio M. Bruna
+    affiliation: 1,2
+    corresponding: true
+    email: embruna@ufl.edu.edu
+  - name: Tony Dickens
+    affiliation: 1
+affiliation:
+  - code: 1
+    address: UF, WEC, PO Box 110430, Gainesville, FL 32611-0430
+  - code: 2
+    address: UF, LAS, PO Box 115530, Gainesville, FL 32611-5530
+abstract: >
+  The abstract of the article.
+  It can also be on *multiple* lines.
+bibliography: "dung_beetles_osbs.bib"
+output:
+  rticles::peerj_article: default
+  bookdown::pdf_book:
+    base_format: rticles::peerj_article # for using bookdown features like \@ref()
+---
+
+
+# Introduction {-}
+
+1.	Dung beetles are a diverse and widespread group of insects that helps maintain the structure and functioning of ecosystems via nutrient cycling, the aeration of soil, secondary seed dispersal, and the indirect suppression of flies and endoparasites (Losey and Vaughan 2006, Nichols et al. 2008, Brown et al. 2010).
+2.	They are also important indicators of disturbance and may be useful in identifying priority areas for conservation (citation) or as indicators of historical or ongoing disturbance (Spector 2006, Nichols et al. 2008). 
+3.	Consequently, dung beetles communities have been quantified throughout the Southern Hemisphere, especially in the tropics.
+4.	Studies of community composition and structure in the northern hemisphere, however, remain relatively rare. 
+5.	Such studies typically focus on dung beetle diversity in cattle pastures (Bertone et al. 2005, Fiene et al. 2011, Kaufman and Wood 2012), with very little conducted in forests or other forms of native vegetation (but see Masís and Marquis 2009, Radtke et al. 2010)(Also Nealis 1977?).
+6.	These studies are often typically of short duration, with sampling often conducted within a single season of known or assumed high productivity (eg., Davis et al. 2002, Spector and Ayzama 2003, Almeida et al. 2011). 
+7.	While this is useful for conducting rapid assessments (Hayes et al. 2009), temporally restricted sampling can miss critical patterns in diversity or abundance  (Hamer et al. 2005, Banks-Leite et al. 2011).
+
+Paragraph.  
+
+1. The strongest influence on the local diversity and abundance of dung beetles appears to be bvegetation structure, which can be a driver of both the abundance and diet of vertebrate fauna.
+2. This can affect the quality and quantity of available dung (Barbero and Palestrini 1999, Nichols et al. 2009). 
+3. It also alters microclimate (Davis et al. 2002) and may influence insect maneuverability and the dispersion of dung odor (Nealis 1977, Numa et al. 2009). Dramatic differences in the composition and abundance of species of dung beetles have been observed among habitats within the same landscape that differ in tree cover, but otherwise share similar environmental and macroclimatic conditions (Nealis 1977, Halffter and Arellano 2002, Spector and Ayzama 2003, Louzada et al. 2010, Filgueiras et al. 2011). 
+
+Paragraph. 
+
+1. Longleaf pine savannas were once the dominant ecosystem in the Southeastern United States, but since European settlement they have undergone a 98% decline in acreage throughout their former 38 million hectare range, and thus have been identified as critically endangered (Noss et al. 1995, *Frost 2006).
+2. This ecosystem is a mosaic of multiple vegetation types shaped largely by the dynamics of fire.
+3. We compared the diversity and abundance of dung beetles in two dominant vegetation types occurring on similar soils in this mosaic – Xeric Hammocks and Sandhills.  
+4. Specifically, we asked the following questions: 
+
+> i. Does the diversity differ between Xeric Hammocks and Sandhills in terms of species richness, composition and structure?
+
+> ii.	Does abundance or biomass differ between the habitats?
+
+> iii.	If we classify beetles into functional groups according to their feeding and nesting behavior, will we find a higher abundance or biomass (or richness?) of certain groups and do the habitats differ in this?
+
+> iv.	What are the seasonal patterns of abundance in the habitats?
+
+We conducted our surveys over the course of one year, both to see how our conclusions regarding this community would change with extended sampling and because previous work suggests long-term sampling is central to understanding coleopteran diversity in Florida (Greenberg and Thomas 1995). 
+
+
+# Methods  {-}
+
+## Study Site 
+
+a.	Our study was conducted at the Ordway Swisher Biological Station (OSBS), a preserve that contains over 3,700 hectares located approximately 20 miles east of Gainesville, FL (29°41' and west longitude 82°). 
+b.	The climate is humid and subtropical, with maximum and minimum daily summer temperatures averaging 31.7 °C and 21.1 °C (Readle, 1990). The average maximum and minimum winter daily temperatures are 19.4 °C and 4.4 °C, and there are 8 to 10 days per year that fall below freezing (Readle, 1990). Annual precipitation averages 1422 mm, with a rainy season lasting from June to September and followed by a dry October and November (Readle, 1990).
+c.	Hunting excluded, mammals include: deer, etc.
+d.	Distance to cattle pasture.
+
+<!-- 2.	Sandhill vs Xeric Hammock -->
+a.	The OSBS includes both Sandhills and Xeric Hammocks, and our surveys were conducted in N =3 sites of each habitat type.
+b.	The Sandhill community occurs on elevated, deep, marine-deposited, yellow sands that allow water to drain rapidly creating a xeric environment on which longleaf pine (Pinus palustris), turkey oak (Quercus laevis), and wiregrass (Aristida stricta var. beyrichianaare) are the characteristic species.
+c.	 It has a widely spaced overstory, a sparse understory, and a rich herb and grass layer that is maintained by regular fires. 
+d.	The open canopy allows for greater fluctuations in temperature and humidity than a closed canopy forest. 
+e.	In contrast, Xeric Hammock is an advanced successional stage that forms when fire is excluded from a landscape that might otherwise support Sandhill. 
+f.	It is characterized by a lower, dense, and closed overstory, or a multi-storied forest typically dominated by Sand live oak (Quercus geminate) and consists of other oak species such as turkey oak (Q. laevis) and blue jack oak (Q. incana). 
+g.	The understory is scattered and comprised by species derived from the original Sandhill community, such as saw palmetto (Serenoa repens). 
+h.	The herb and grass layer is very sparse in Xeric Hammock and the forest floor is covered in a relatively incombustible layer of oak litter (For a detailed description of these plant communities, see FNAI 2010, (other – maybe Varner et al. 2005)). 
+
+## Sampling Design
+
+<!-- 1.	Pitfall traps -->
+a.	From October 2010-2011, we collected beetles monthly using pitfall traps baited with cow dung (Spector 2006, Andrade et al. 2011). 
+b.	In each site we established one 200 m transect, with N = 10 traps evenly spaced along each transect. 
+c.	All traps were set on the same day and left out for a 24 hour period. 
+d.	Our traps, modified from those used by Wood and Kaufman (2008), were constructed from (6?) inch(cm) sections of (4?) inch(cm) diameter PVC pipe. 
+e.	They were fitted with a (type) screen on the bottom and a (_cm diameter) funnel on top with an extended (_cm) plastic platform used to suspend the trap over a hole in the ground.  
+f.	The traps were set level to the ground by placing them into a semi-permanent hole that was maintained by a larger section of PVC while traps were not in use. 
+g.	Dung was wrapped in paper towel to exclude beetles and suspended over the trap on a wire cloth platform. 
+h.	Note that although the traps of Wood and Kaufman (2008) were designed as a live catch trap, we converted ours by placing a (_ml) cup containing 95% ethanol inside the trap after we observed some beetles escaping and predatory beetles entering the traps during our preliminary surveys.
+
+<!-- 2.	Cow dung -->
+a.	The dung used to bait traps was collected from the University of Florida’s Beef Teaching Unit from cattle that were unsupplemented – (with what?)
+b.	The dung was collected fresh in the morning, homogenized, and formed into approximately (_ml) balls and frozen at (_degrees Celsius) until deployment.
+c.	Although cattle are absent in our study sites, we chose to use cow dung to allow our study to be comparable other studies conducted in the region (Bertone et al. 2005, Wood and Kaufman 2008, Kaufman and Wood 2012). 
+d.	While some dung beetles have a clear preference for a particular type of dung, most species are generalists that use a broad diversity of vertebrate excrement (cite - check Gordon 1983, and Mart´in Piera and Lobo 1996, and see what Woodruff has to say; see page 13 of Haffter and Edmonds)
+e.	All beetles captured were stored in 95% ethanol and identified to species or morphospecies using Woodruff (1973).   
+f.	Voucher specimens were confirmed by (who) at (where) and a reference collection was deposited (where).
+
+## Analyses
+
+### Species Richness
+a.	To compare species richness between habitat types (and transects?), we constructed sample-based rarefaction curves and plotted them against the accumulated number of individuals, as recommended by Gotelli and Colwell (2001). 
+b.	Ninety five percent confidence intervals were also calculated. 
+c.	To estimate the true richness of our study sites, we used the nonparametric estimator Chao 2, which relies on the presence-absence data in the distribution of species among samples (Colwell and Coddington 1994)
+d.	 The software package EstimateS8.2 (Colwell 2006) was used to perform these analyses.
+e.	(Or we will use the estimations that Dr. Robert Dorazio teaches us.)
+
+### Species Composition  
+
+a.	We created a non-metric multidimensional scaling (NMDS) ordination plot based on the Bray-Curtis similarity index to compare the differences in community structure and composition among transects. 
+b.	This was done with # of permutations in BiodiversityR  (Kindt and Coe 2005, R Development Core Team 2011). 
+c.	Each transect had its monthly trap data pooled into a single vector. 
+d.	Values were square-root transformed in order to diminish the influence of highly abundant species and standardized by dividing species abundance by total abundance to get species proportions for each habitat, which eliminates differences in the results that are due to total abundance. 
+e.	To analyze whether transects within a habitat were significantly more similar to each other we used an ANOSIM with 100 permutations. 
+f.	This plot was constructed and these analyses were performed in the R environment using the package BidoviersityR (Kindt and Coe 2005, R Development Core Team 2011).
+
+### Abundance and Biomass
+
+a.	Abundance…
+b.	Biomass was estimated by randomly selecting 20 individuals of each species for which we had at least 20, and placing them into an oven at 60 degrees Celsius for at least 48 hours and then weighed on a _(type) scale. 
+c.	An even number of female and males were selected in species where sex was obvious (Aphodius leconti, Dichotomius carolinus, Onthophagus tuberculifrons, Phaneus igneus). 
+d.	Very small species (<0.000?g) were weighed in batches of 5 and the value was then divided by five. 
+e.	These dry weights were then multiplied by the relative abundance of each species. 
+f.	This method does not account for any mass lost due to storage in ethanol, but this effect should be minor (Gaston et al. 1996) and the method is still reliable for comparing relative differences in biomass.
+
+### Function Group
+
+a.	We also analyzed abundance and biomass according to function group based on nesting behavior. 
+b.	Three basic categories were used: the dwellers, the tunnelers, and the rollers. 
+c.	These nesting behaviors have a different effect on how and where dung is relocated, and thus are considered functionally distinct (cite). 
+d.	The dwellers feed and nest directly within the dung pat, without any dung removal; the tunnelers dig tunnels directly below the dung and provision the ends of the tunnels with dung collected from above; and the rollers from balls of dung and roll them away horizontally from the pat, before shallowly burying them. 
+e.	 Statistics
+f.	What about richness?
+
+### Seasonality  
+a.	Finally, we constructed seasonal abundance graphs for the total number of beetles in each habitat and for the species that had at least 50 individuals, which included the following: Phanaeus igneus floridanus (name), Boreocanthon depressipennis (name), Onthophagus tuberculifrons (name),  Onthophagus	oklahomensis (name),  Aphodius campestris (name), Onthophagus hecate (name), Melanocanthon  bispinatus (name), Glaphyrocanthon v. viridis (name), Ateuchus lecontei (name),  Aphodius stupidus (name), Melanocanthon punctaticollis (name), Dichotomius carolinus (name), and Blackburneus fordi (name). 
+b.	A graph was also created for total amount of beetle biomass in each habitat.
+c.	Stats
+6.	Climate
+a.	A mean temperature and total rainfall graph was included for visual comparison to the seasonal abundance graphs. 
+b.	Weather data was collected from the (_) located on the Ordway-Swisher Biological Research and was at most _ meters away from any of the transects. 
+c.	Mean temperature was averaged and rainfall was summed for the time between collections, and 30 days prior to the first collection. 
+d.	Temperature was taken at (_ inches).
+
+# Results
+
+<!-- General, Richness -->
+a.	We captured a total of 23,240 individuals from 29 species, belonging to (this many) tribes and (16) genera. 
+b.	The Hammock habitat was represented by 13,411 individuals from 26 species collected in 390 traps and the Sandhill by 9,829 from 21 species collected in 388 traps (two traps were excluded due to interference). 
+c.	There were 18 species (62% overlap) found in both habitats.
+d.	Three species were found solely in Sandhill and eight species were found solely in Hammock. 
+e.	The rarefaction curves did not reach an asymptote, meaning that we would expect to find more species with a greater sampling effort (Fig 1). 
+f.	However, according to the Chao2 non-parametric estimator of true richness, Hammock probably has 27.2, and Sandhill 21.75, which corresponds to a level of completeness of 96% and 97% respectively. 
+g.	The 95% CI intervals of the rarefaction curves overlap, so no statistical difference was observed in the richness of the habitats.
+
+## Composition and Similarity
+a.	NMDS, ANOSIM
+3.	Structure and biomass
+a.	The Hammock habitat is notable for the large number of its most common species, Ateuchus lecontei (8,476; 63.2%), which clearly dominated the site, but in the Sandhill it was the second most common species with only 2,712 (27.6%) and occurred in a similar abundance to that of the most common species Onthophagus tuberculifrons (2,824; 28.7%) (Fig 2). 
+b.	The Simpson diversity index was higher for Sandhill (.806), than for the Hammock (.549), which indicates a more evenly distributed community as does the steeper initial slope of the Sandhill rarefaction curve (Fig 1) (Olszewski 2004). 
+c.	The biomass analysis showed a different pattern than that of the abundance analysis, with Hammock having the least total biomass at an estimated 119 g and Sandhill with 247 g (stats? St error?). In the Hammock habitat, Ateuchus lecontei (72.8 g) accounted for the most biomass, followed by Melanocanthon bispanatis (13.8 g) and Onthophagus tuberculifrons (10.4 g). In the Sandhill habitat it was Dichotomous carolinus (147.2 g) that had the largest biomass, followed by Melanocanthon punctaticolis (29.7 g) and then both Phanaeus igneus and A.lecontei (23g).
+d.	A lecontei is a relatively small species (_g), whereas Dichotomius is very large (_) which accounts for it having such a large biomass despite a relatively low abundance.
+e.	One species that had a considerable number of individuals (55) in Sandhill, but was absent in Hammock was Blackburneus fordi. This species is rare and it is a record for Putnam County. 
+f.	There was a single individual collected that was a non-native species: Aphodius lividus.
+
+## Functional Diversity
+
+4.	Tunnelers were the most abundant functional group.
+a.	Tunnelers were the most abundant functional group in both habitats.
+b.	The Hammock had a higher abundance of tunnelers than the Sandhill, but a lower biomass.
+c.	Within each habitat, there were similar abundances of dwellers and rollers, but dwellers accounted for a much lower biomass due to the small size of species that make up the Aphodiinae subfamily to which the dwellers belong. 
+d.	Sandhill had more dwellers and rollers than Hammock, and a higher biomass of rollers.
+e.	Richest?
+
+## Seasonal Abundance 
+
+5.	Patterns of total abundance and biomass
+a.	Overall, the cold and dry winter months had the least activity and the warm summer months of July and August had the highest activity (fig. 4). 
+b.	Sandhill had higher abundances of beetles caught during the winter months than Hammock, and began increasing after winter more steeply, with a spike in numbers occurring in March that did not happen in the Hammock until April. 
+c.	April, May, and June were very similar for both sites, but in the summer months Hammock reached much higher numbers and remained high until October.  
+d.	Sandhill sharply decreased in number sooner in September.  
+e.	A different pattern was observed according to the seasonal biomass graphs (fig. 5). 
+f.	In the summer months, the Sandhill spiked much higher than the Hammock, and in all months the Sandhill biomass was equal to or greater than the Hammock.
+
+<!-- 6.	Patterns of abundance for some noteworthy species -->
+a.	The pattern of total abundance for Hammock closely resembles the pattern of abundance of its dominant species Ateuchus lecontei (fig_.).
+b.	The summer spike in biomass that occurs in Sandhill corresponds to the summer spike in the large species D. carolinus (fig_).
+c.	Phanaeus igneus is also relatively large (grams) and Melanocanthon punctaticolis is a medium sized beetle (grams), and both are species that sharply increased in March in the Sanhill habitat (fig_ and _.) and account for the spike in total biomass during that time. 
+d.	The Onthophagus tuberculifrons abundance graph shows a peculiar one month lag in the pattern of abundance in the Hammock from the Sandhill during much of the year (fig_.). 
+e.	For the species Aphodius campestris, there was no clear pattern. At times the Hammock produced more, and at other times the Sandhill produced more (fig_). 
+f.	Melanocanthon bispanatus spiked in March and April for both habitats and continued to be abundant at the Hammock, but dropped off in the Sandhill in May (fig_).
+
+# Discussion
+
+<!-- 1.	Vegetation structure on upland sandy soils of Florida drives patterns of dung beetle species abundance and seasonality, but differences in richness and composition were non-significant. -->
+a.	The effect that vegetation has on dung beetle communities is largely determined by the biogeographical history of the region (Escobar et al. 2007)
+b.	Depending on the historical heterogeneity and intermittent interconnectedness of ecosystems within a landscape, one may find varying degrees of species turnover between adjacent habitats (Halffter and Arellano 2002, Escobar et al. 2007), or a situation where one ecosystem’s community is an impoverished subset of the other, as is typical of rare or new habitat types within a formerly homogonous landscape (eg., Andresen 2005, Escobar et al. 2007).
+c.	In our comparison of Sandhill vs Xeric Hammock, we found more species in Hammock and there was only 63% overlap in composition, but these differences in richness and composition were non-significant.
+d.	This is despite a sampling effort that included a total of 23,240 individual dung beetles caught in 778 traps, with 9,829 beetles in Sandhill and 13,411 in Hammock, at an estimated sampling completeness of 96-97% according to Chao2.
+e.	The non-significant differences could be due to (the seasonal variability? explain).
+f.	It could also be that there is in fact little difference in species composition or richness between the habitats. 
+g.	Hammock historically occurred in relatively small sized pockets within a larger landscape dominated by longleaf pine (cite), and perhaps was unable to develop a more distinctive dung beetle assemblage. 
+h.	What our results do suggest about vegetation structure on upland sandy soils of Florida is that it drives patterns of dung beetle species abundance and seasonality. 
+i.	There were clear differences between the habitats in the abundances of certain species (or structure), and when graphed by their monthly occurrences, we see variety of different patterns. 
+j.	A similar finding was made in a study comparing semi-deciduous forest to deciduous forests in Mexican tropical dry forest, where the former occurs sporadically in small swaths in the later, larger habitat.  Those two habitats did not have distinct dung beetle faunas, but did have significant seasonal differences in the community structure and abundances (and guild structure) between the habitats (Andresen 2005).
+k.	other study comparisons?
+
+<!-- 2.	The differences between the sites in Ateuchus lecontei and D. dichotomius are especially important. -->
+
+a.	Intro/transition from last paragraph.
+b.	Where large and fast tunneling Dichotomius species such as D. carolinus are abundant, they are able to pre-empt large amounts of dung resources and drive down the abundance of other tunneler species (Horgan and Fuentes 2005). 
+c.	In terms of biomass, D. carolinus dominated Sandhill habitats, but was still relatively rare in Hammock.
+d.	Meanwhile, the abundance of the most common species, Ateuchus lecontei, was three times higher in Hammock than in Sandhill. 
+e.	A. lecontei has a very similar seasonal occurrence to D. carolinus and it is possible that the relative absence of D. carolinus in Hammock is allowing for a larger presence of A. lecontei than in Sandhill. 
+f.	However, the average biomass of an individual D. carolinus is _ times greater than A. lecontei, and despite the much greater abundance of A. lecontei in Hammock, biomass was still higher in the Sandhill.
+g.	This may have important implications concerning ecosystem function, because greater biomass likely means greater amounts of dung burial.
+
+<!-- 3.	Higher beetle biomass and larger species can have a number of functional consequences. -->
+a.	Higher rates of dung removal by dung beetles can have a positive effect on soil nutrition, plant growth, seed dispersal, parasite suppression, and fly suppression (Nichols et al. 2008). 
+b.	Moreover, large-bodied tunneling species are generally more efficient at removing dung and thus have a larger functional effect than smaller species when considering equal amounts of biomass (Doube 1990, Larsen et al. 2005). 
+c.	When large nocturnal tunnelers in a tropical forest were experimentally removed, dung burial was disproportionately reduced by 75% (Slade et al. 2007). (D. carolinus is also nocturnal). 
+d.	In general, large dung beetles also burry greater amounts of seeds and bigger seeds, although the effect on plant regeneration depends on many variables, including: seasonality, depth of burial, horizontal displacement, and the amount of debris removed from dung (Andresen 2002, Andresen and Levey 2004). 
+e.	Another difference between the large beetles, D. carolinus and P. igneus, versus smaller beetles is the greater number and size of the phoretic mites that they carry (casual observation, Halffter and Martinez 1966 (ref. in Woodruff) identified 5 species). 
+f.	Phoretic mites feed on fly larvae and may be important in the control of fly populations (Nichols et al. 2008). 
+g.	However, the number of available carriers tends to be the limiting factor in mite population dynamics (Glida et al. 2004); and D. carolinus and P.igneus occur less frequently then some of the smaller beetles. 
+h.	D. carolinus may also have a different effect concerning helminth populations because it’s feeding actions have little direct effect on helminth eggs, whereas the feeding actions of some other species destroys them (Miller 1961, Miller et al. 1961).
+
+<!-- 4.	Seasonality -->
+a.	Temporal activity varied between the habitats. 
+b.	There were some species that showed very different temporal patterns in each habitat (ex., A. campestris, M. bispinatus), while other species had a similar timing of activity, but to a greater extreme in abundance in one habitat or the other (ex., A. lecontei, A. stupidus, M. punctaticollis). 
+c.	Because certain species appear to favor one or the other habitat at different times of the year, the two habitats may have complementary effects at sustaining beetle populations.
+d.	There was a general pattern of higher winter activity and an earlier increase in total beetle abundance in the spring months in Sandhill habitat when compared to Hammock. 
+e.	This could be due to the open canopy allowing larger amounts of solar radiation to reach the forest floor. 
+f.	Dung beetle flight activity is primarily dependent upon solar radiation for temperate diurnal species during the day (Lobo et al. 1998, Halffter and Arellano 2002), and over a seasonal timescale, temperature and precipitation are the most important determinants of dung beetle activity (cite). 
+g.	Temperature and humidity can also have an effect on dung causing it to dry under certain extremes.  
+h.	It is possible that during hot or dry months, greater penetration of sunlight through the Sandhill canopy could have a negative effect on the quality or attractiveness of the dung to certain species. 
+i.	This is true of buried dung as well, which needs to maintain adequate moisture for the survival and development of immature beetles.
+j.	 Dichotomius carolinus is one species that may be less susceptible than smaller species to suffer from desiccation during the egg and early larval stages due to the large size of its brood mass (Sowig 1995). This could be a contributing factor for its success in the Sandhill. 
+k.	 (Read Hammer 2005 to see if it has any relevant info, also Andresen 2008) – 
+
+<!-- Function Group -->
+a.	There is increasing recognition that functional group richness may be a more important concept than species richness in the effect it has on ecosystem functioning and the consequences of the loss of that diversity  (Slade et al. 2007, Horgan 2008, Barragán et al. 2011).
+b.	We separated groups according to their feeding and nesting behavior because these behaviors (tunneling, rolling and dwelling) have a very different effect on dung displacement. 
+c.	The tunneler group, which was by far the most common in both our habitats, usually removes the largest amount of dung and buries it directly below the pat and is an especially important group for nutrient conservation and…
+d.	The rollers place a greater effort into horizontally transporting a portion of dung away from the main pat, and while they may be less efficient at overall dung removal, their effect on seed dispersal can be significant (cite). 
+e.	This group was more common and had a higher biomass in the Sandhill, and while vastly outnumbered by tunnelers, their presence…
+f.	Dwellers do not remove any dung and thus their effect on dung is quite different than the other groups. Their activity within the pat can lead to an aeration effect, causing it to dry faster. 
+g.	They can also have an effect on seeds. Accelerated dung decomposition by dwellers has been shown to increase germination of certain seeds in deer dung, at least in the short term (Ishikawa 2011)
+h.	Dwellers were the least common, and because of their very small size they account for very little biomass. However, some species of dwellers were active in the winter time when most other species were not, so their relative importance during this season may be greater than at other times.
+i.	Because the Sandhill had higher frequencies of both dwellers and rollers, this habitat may be more important for those guilds. 
+j.	A facilitative effect is also possible when multiple guilds are present (Slade et al. 2007). Explain.
+k.	How did our study compare to similar studies?
+6.	Exotics
+a.	The benefits that dung beetles bring to livestock agriculture have generated an interest in them by farmers and have led to the introduction and spread of exotic beetles into the Southeastern United States (Fincher et al. 1983). 
+f.	Some species are now abundant in Florida, and pastures nearby in Gainesville, Florida are dominated by exotic species, as are pastures in North Carolina (Bertone et al. 2005, Wood and Kaufman 2008, Kaufman and Wood 2012). 
+g.	One species, Onthophagus gazelle, is a superior competitor to native species found in open cattle pastures of Georgia, but appears to have a more restricted diet and it might be limited in its ability to penetrate wooded areas (Young 2007). 
+h.	Under the assumption that exotic species are specialists of open cattle pasture, we expected to see less dominance of them in our sites, especially in the denser Hammock. 
+i.	Even so, it came as a surprise that we only found a single individual exotic in the Ordway-Swisher Biological Reserve, considering the large number of nearby cattle pastures in Putnam County and surrounding area and the pervasiveness of exotic dung beetles in cattle pastures.
+j.	Kaufman and Wood (2012) found six exotic species in Gainesville pastures, and four of the six most dominant species at their sites were exotics.
+k.	Many of the species that were common in our study were rare in cattle pasture, and vice versa.
+l.	This is especially true for A. lecontei, our most common dung beetle, which only accounted for between 0.10% and 0.33% (181 total individuals) of the beetles caught on their sites. 
+m.	D. carolinus, which dominated in terms of biomass in our study, was also very rare in their study (9 total; 0.01% - 0.07%). 
+n.	Other species that were common in ours (>50) and rare or absent in theirs include: M. punctaticolis, A. campestris, M. bispinatus, A. stupidus, G.viridis, B.fordi, and A. cylindrus.
+
+## Concluding remarks
+
+<!-- 4.	Fire -->
+a.	The feature that fundamentally distinguishes our habitats from one another is the occurrence and frequency of fire. 
+b.	Fire can have a twofold effect on insect communities; an indirect effect by shaping vegetation structure, as well a direct effect from the burn. 
+c.	In Florida sandhills, short term effects of fire on arthropod populations have been observed, with an immediate reduction in numbers due to those directly killed by fire (Knight and Holt 2005), to a later positive effect where the highest arthropod diversities were associated with the most frequent and hottest fires probably due to the growth of palatable re-sprouts (Provencher et al. 2003). 
+d.	These were primarily herbivorous species, and dung beetles may respond differently. 
+e.	In a tropical savannah ecosystem, Louzada (2010) found no direct effect of fire on dung beetle community composition, but instead concluded that fire had an indirect effect by its interaction with vegetation structure and the spatial location of sites. 
+f.	In that ecosystem, increased forest cover at the landscape level had a positive effect on total dung beetle abundance, species richness, the richness of uncommon species, and the tunneler guild.  
+g.	Site 4 of our study was designated as a hammock, but experienced a (prescribed?) fire in the month of _ during the course of this study. 
+h.	This may have had an effect on our results, but… 
+i.	In the Sandhill sites it had been _,_, and _ years since 1,2, and 3 were burned, and they have regularly undergone prescribed fire at an interval of _.
+5.	Unincorporated miscellaneous facts 
+a.	In South Texas, open canopy chaparral habitats were found to have similar (raw) species richness, but with a different pattern of abundance, than areas that were shaded due to encroachment by woody vegetation. Twelve out of 16 species were associated with either shaded or open habitats (Nealis 1977).
+b.	Aphodiidae may be underrepresented in our study, because they are less likely to be found in cattle dung, (at least in Italy) (Barbero and Palestrini 1999).
+c.	Landscape is important because similar habitats in different landscapes had different species assemblages in this study (Numa et al. 2009)
+d.	Dichotomus carolinus and Canthon vigilans are among the species that may be most threatened by O. gazella. (find citation)
+e.	“Species-accumulation curves often intersect when one sampling area is a homogeneous habitat while the other sampling area presents habitat heterogeneity that promotes the dominance of a few species (Lande et al. 2000)” IN (Andresen 2005)
+f.	“Dung beetles from different functional groups may respond to changes in vegetation structure in different ways, as habitat openness can directly increase the desiccation rate of dung pats and nest balls, potentially restricting the rollers and dwellers to more shaded areas (Halffter and Edmonds 1982; Hanski and Cambefort 1991).{(Louzada et al. 2010)}” – We found the opposite.
+
+
+
+<!-- ## Figures and Tables {-} -->
+
+<!-- Use the table and tabular commands for basic tables --- see Table \@ref(tab:widgets), for example. You can upload a figure (JPEG, PNG or PDF) using the project menu. To include it in your document, use the includegraphics command as in the code for Figure \@ref(fig:view) below. -->
+
+<!-- Standard \LaTeX references will work as well (e.g. Fig. \ref{fig:view}). -->
+
+<!-- There are three ways to include figures: -->
+<!-- 1. The LaTeX way -->
+<!-- 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=\linewidth]{view}
+\caption{An example image.}
+\label{fig:view}
+\end{figure} 
+
+ -->
+
+<!-- 2. The RMarkdown way -->
+
+<!-- ```{r view, out.width = "100%", fig.cap = "An example image.", echo = FALSE} -->
+<!-- knitr::include_graphics("view.jpg") -->
+<!-- ``` -->
+
+
+<!-- 3. The pandoc way -->
+<!-- 
+
+![An example image. Text *can* be processed with markdown.](view.jpg){#view width = 100%}
+
+ -->
+
+<!-- 
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|r}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\caption{\label{tab:widgets}An example table.}
+\end{table}
+-->
+
+<!-- Item     Quantity -->
+<!-- ------- --------- -->
+<!-- Widgets        42 -->
+<!-- Gadgets        13 -->
+
+<!-- Table: (\#tab:widgets) An Example Table. -->
+
+<!-- ## Citations {-} -->
+
+<!-- LaTeX formats citations and references automatically using the bibliography records in your .bib file, which you can edit via the project menu. Use the cite command for an inline citation, like @Figueredo:2009dg, and the citep command for a citation in parentheses [@Figueredo:2009dg]. -->
+
+<!-- ## Mathematics {-} -->
+
+<!-- \LaTeX{} is great at typesetting mathematics. Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let -->
+<!-- $$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n} -->
+<!--       = \frac{1}{n}\sum_{i}^{n} X_i$$ -->
+<!-- denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$. -->
+
+<!-- ## Lists {-} -->
+
+<!-- You can make lists with automatic numbering \dots -->
+
+
+<!-- 1. Like this, -->
+<!-- 1. and like this. -->
+
+<!-- or bullet points... -->
+
+<!-- - Like this, -->
+<!-- - and like this. -->
+
+<!-- or with descriptions... -->
+
+<!-- - **Word** Definition -->
+<!-- - **Concept** Explanation -->
+<!-- - **Idea** Text -->
+
+
+<!-- We hope you find write\LaTeX\ useful for your PeerJ submission, and please let us know if you have any feedback. Further examples with dummy text are included in the following pages. -->
+
+<!-- # Methods {-} -->
+
+<!-- This is an equation inserted using LaTeX syntax directly. -->
+
+<!-- \begin{equation} -->
+<!-- \cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta -->
+<!-- \label{eq:refname2} -->
+<!-- \end{equation} -->
+
+<!-- You can also use `$$..$$` to achieve the same -->
+
+<!-- $$ -->
+<!-- \cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta -->
+<!-- $$ -->
+
+<!-- ## Subsection {-} -->
+
+<!-- Use `{-}` after a header section so that it is unnumbered. -->
+
+<!-- #### Paragraph   -->
+
+<!-- Header level 4 are equivalent to `\paragraph{}` -->
+
+<!-- ## Subsection {-} -->
+
+
+<!-- You can insert figure using R code chunk with different options -->
+
+<!-- ```{r results, fig.width = 5, fig.height = 4, out.width = "100%", fig.cap = "In-text Picture", echo = FALSE} -->
+<!-- time = seq(1.5, 8, 0.1) -->
+<!-- plot(time, sin(time), type = "l", xlab = "time [s]", ylab = "amplitude [m]",  -->
+<!--      cex.main = 2, col = "blue", lwd = 3, font = 2, font.main = 2) -->
+<!-- ``` -->
+
+
+<!-- You can reference figure if you use **bookdown** format extensions as shown in YAML header -->
+
+<!-- # Results and Discussion {-} -->
+
+<!-- This is another section -->
+
+<!-- ## Subsection {-} -->
+
+<!-- Which shows level 2 -->
+
+<!-- ### Subsubsection {-} -->
+
+<!-- And level 3 headers -->
+
+<!-- ### Subsubsection {-} -->
+
+<!-- with multiple subsubsections -->
+
+<!-- ## Subsection {-} -->
+
+<!-- and subsections -->
+
+# Acknowledgments {-}
+
+<!-- So long and thanks for all the fish. -->
+
+# References
