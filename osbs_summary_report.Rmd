@@ -15,8 +15,8 @@ header-includes:
 - \pagestyle{fancy}
 - \fancyfoot[R]{last update `r Sys.Date()`}
 - \fancyfoot[C]{ }
-- \fancyhead[R]{OSBS Dung Beetles, p. \thepage}
-- \fancyhead[L]{(`r format(Sys.time(), '%Y')`)}
+- \fancyhead[R]{Bruna et al., p. \thepage}
+- \fancyhead[L]{OSBS Dung Beetle Survey}
 - \usepackage[default]{sourcesanspro}
 - \usepackage{parskip}
 - \usepackage{xcolor}
@@ -32,7 +32,6 @@ header-includes:
 - \definecolor{darkmidnightblue}{rgb}{0.0, 0.2, 0.4}
 mainfont: SourceSansPro
 ---
-
 
 
 ```{r setup, include=FALSE}
@@ -107,9 +106,6 @@ btl_data_long<-read_csv(here("data_clean", "dung_btl_data_clean.csv")) %>%
 ```
 
 
-
-
-
 ```{r, echo=FALSE, message = FALSE, , warning = FALSE}
 # this is to make sure numbers are printed in full, not in scientific notation
 inline_hook <- function(x) {
@@ -129,10 +125,20 @@ knitr::knit_hooks$set(inline = inline_hook)
 total_N<-btl_data_long %>% summarise(n=sum(count, na.rm=TRUE))
 ```
 
+**Total number of beetles collected (all dates & spp pooled):** `r total_N`
+
+```{r total_n_hab, echo=FALSE, message = FALSE, , warning = FALSE}
+### total number of beetles sampled by habitat
+total_N_habitat<-btl_data_long %>% group_by(habitat) %>% summarise(n=sum(count, na.rm=TRUE))
 
 
-**Total number of beetles collected**, all dates and spp combined: `r total_N`
+n_hab_table<-total_N_habitat  %>%
+  kbl(caption = "Total number of beetles collected by habitat") %>%
+  kable_styling(latex_options = "HOLD_position")
 
+
+n_hab_table
+```
 
 ```{r total_n_sample, echo=FALSE, message = FALSE, , warning = FALSE}
 # total number of beetles sampled each round
@@ -150,29 +156,6 @@ n_spl_table
 ```
 
 
-
-<!-- `r kable(total_N_sample, caption = "total number of beetles sampled each round") %>% kable_styling(latex_options = "HOLD_position")`  -->
-
- 
-
-```{r total_n_hab, echo=FALSE, message = FALSE, , warning = FALSE}
-### total number of beetles sampled by habitat
-total_N_habitat<-btl_data_long %>% group_by(habitat) %>% summarise(n=sum(count, na.rm=TRUE))
-
-
-n_hab_table<-total_N_habitat  %>%
-  kbl(caption = "Total number of beetles collected by habitat") %>%
-  kable_styling(latex_options = "HOLD_position")
-
-
-n_hab_table
-```
-
-
-<!-- `r kable(total_N_habitat, caption ="total number of beetles sampled by habitat") %>% kable_styling(latex_options = "HOLD_position")` -->
-
-
-
 ```{r total_n_spp, echo=FALSE, message = FALSE, , warning = FALSE}
 ### total number of beetles sampled by species
 spp_totals<-btl_data_long %>% 
@@ -187,10 +170,13 @@ n_spp_table<-spp_totals  %>%
 n_spp_table
 ```
 
+<!-- `r kable(total_N_sample, caption = "total number of beetles sampled each round") %>% kable_styling(latex_options = "HOLD_position")`  -->
+
+<!-- `r kable(total_N_habitat, caption ="total number of beetles sampled by habitat") %>% kable_styling(latex_options = "HOLD_position")` -->
 
 <!-- `r kable(spp_totals, caption = "total number of beetles sampled by species") %>% kable_styling(latex_options = "HOLD_position")` -->
 
-<!-- \newpage -->
+\newpage
 
 <!-- ```{r fig1, echo=FALSE, message = FALSE, , warning = FALSE} -->
 <!-- # Load Library -->
@@ -206,7 +192,7 @@ n_spp_table
 <!--   mutate(sp_code = reorder(sp_code, desc(n))) -->
 
 
-<!-- levels(btl_order$sp_code) -->
+<!-- # levels(btl_order$sp_code) -->
 
 <!-- # %>% -->
 <!-- #   ggplot(aes(sp_code, n)) + -->
@@ -227,26 +213,158 @@ n_spp_table
 <!--   arrange(sample_round,desc(n)) -->
 
 <!-- # data<-btl_data_sums %>% filter(sp_code=="c_vig"|sp_code=="d_car") -->
-<!-- # data<-btl_data_sums %>%  -->
-<!-- #   filter(sp_code!="a_lec") %>%  -->
-<!-- #   filter(sp_code!="o_tub") %>%  -->
-<!-- #   filter(sp_code!="a_cam") %>%  -->
-<!-- #   filter(sp_code!="m_bis") %>%  -->
-<!-- #   filter(sp_code!="h__") %>%  -->
-<!-- #   filter(sp_code!="a_stu") %>%  -->
+<!-- # data<-btl_data_sums %>% -->
+<!-- #   filter(sp_code!="a_lec") %>% -->
+<!-- #   filter(sp_code!="o_tub") %>% -->
+<!-- #   filter(sp_code!="a_cam") %>% -->
+<!-- #   filter(sp_code!="m_bis") %>% -->
+<!-- #   filter(sp_code!="h__") %>% -->
+<!-- #   filter(sp_code!="a_stu") %>% -->
 <!-- #   filter(sp_code!="m_pun") -->
 <!-- # data<-btl_data_sums %>% -->
 <!-- #   filter(n<20) -->
 <!-- data<-btl_data_sums -->
-<!-- fig1<-ggplot(data,  -->
-<!--              aes(x=sample_round,  -->
-<!--                  y=n,  -->
-<!--                  group=habitat,  -->
+<!-- fig1<-ggplot(data, -->
+<!--              aes(x=sample_round, -->
+<!--                  y=n, -->
+<!--                  group=habitat, -->
 <!--                  color=habitat)) + -->
 <!--   geom_line()+ -->
 <!--   geom_point()+ -->
 <!--   facet_wrap(vars(sp_code)) -->
 <!--   # facet_wrap(vars(sp_code),scales="free",ncol = 3) -->
-<!-- fig1 -->
+<!-- # fig1 -->
 <!-- ``` -->
 
+
+
+\newpage
+
+```{r fig2, echo=FALSE, message = FALSE, , warning = FALSE}
+# Load Library
+
+
+# Create a Faceted LineGraph using
+# facet_wrap Function.
+
+btl_order <- btl_data_long %>%
+  group_by(sp_code) %>%
+  summarize(n=sum(count, na.rm=TRUE)) %>%
+  arrange(desc(n)) %>%
+  mutate(sp_code = reorder(sp_code, desc(n)))
+
+
+# levels(btl_order$sp_code)
+
+# %>%
+#   ggplot(aes(sp_code, n)) +
+#   geom_col(show.legend = FALSE)
+
+# btl_order$sp_code
+
+
+btl_data_sums<-btl_data_long %>%
+  group_by(sample_round,sp_code,habitat) %>%
+  summarize(n=sum(count, na.rm=TRUE)) %>%
+  arrange(sample_round,desc(n))
+
+btl_data_sums_winter<-btl_data_long %>%
+  filter(sample_round<6) %>%
+  group_by(sample_round,sp_code,habitat) %>%
+  summarize(n=sum(count, na.rm=TRUE)) %>%
+  arrange(sample_round,desc(n))
+
+
+
+mega_spp<-btl_data_long %>% 
+  group_by(sp_code,genus,species) %>% 
+  summarise(n=sum(count, na.rm=TRUE)) %>% 
+  filter(n>2000) %>% 
+  ungroup() %>% 
+  select(sp_code)
+
+
+common_spp<-btl_data_long %>% 
+  group_by(sp_code,genus,species) %>% 
+  summarise(n=sum(count, na.rm=TRUE)) %>% 
+  filter(n>200 & n<2000) %>% 
+  ungroup() %>% 
+  select(sp_code)
+
+
+
+rare_spp<-btl_data_long %>% 
+  group_by(sp_code,genus,species) %>% 
+  summarise(n=sum(count, na.rm=TRUE)) %>% 
+  filter(n<200) %>% 
+  ungroup() %>% 
+  select(sp_code)
+
+btl_data_rare<-btl_data_long %>%
+  filter(sp_code %in% rare_spp$sp_code) %>% 
+  group_by(sample_round,sp_code,habitat) %>%
+  summarize(n=sum(count, na.rm=TRUE)) %>%
+  arrange(sample_round,desc(n))
+
+btl_data_common<-btl_data_long %>%
+  filter(sp_code %in% common_spp$sp_code) %>% 
+  group_by(sample_round,sp_code,habitat) %>%
+  summarize(n=sum(count, na.rm=TRUE)) %>%
+  arrange(sample_round,desc(n))
+
+
+btl_data_mega<-btl_data_long %>%
+  filter(sp_code %in% mega_spp$sp_code) %>% 
+  group_by(sample_round,sp_code,habitat) %>%
+  summarize(n=sum(count, na.rm=TRUE)) %>%
+  arrange(sample_round,desc(n))
+
+# data<-btl_data_sums %>% filter(sp_code=="c_vig"|sp_code=="d_car")
+# data<-btl_data_sums %>%
+#   filter(sp_code!="a_lec") %>%
+#   filter(sp_code!="o_tub") %>%
+#   filter(sp_code!="a_cam") %>%
+#   filter(sp_code!="m_bis") %>%
+#   filter(sp_code!="h__") %>%
+#   filter(sp_code!="a_stu") %>%
+#   filter(sp_code!="m_pun")
+# data<-btl_data_sums %>%
+#   filter(n<20)
+
+plot_btl_n <- function(data) {
+  btl_n_plot<-ggplot(data,
+               aes(x=sample_round,
+                   y=n,
+                   group=sp_code,
+                   color=sp_code)) +
+    geom_line()+
+    geom_point()+
+    # facet_wrap(vars(habitat))
+    facet_wrap(vars(habitat),scales="fixed",ncol = 1)+
+    theme_bw()
+}
+```
+
+
+## Superabundant Species
+```{r fig_mega, echo=FALSE, message = FALSE, , warning = FALSE}
+# Load Library
+fig<-plot_btl_n(btl_data_mega)
+fig
+```
+
+\newpage
+## Common Species
+```{r fig_common, echo=FALSE, message = FALSE, , warning = FALSE}
+# Load Library
+fig<-plot_btl_n(btl_data_common)
+fig
+```
+
+\newpage
+## Rare Species
+```{r fig_rare, echo=FALSE, message = FALSE, , warning = FALSE}
+# Load Library
+fig<-plot_btl_n(btl_data_rare)
+fig
+```
